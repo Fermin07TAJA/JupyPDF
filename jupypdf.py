@@ -46,7 +46,8 @@ def convert_notebook_to_pdf(notebook_path, progress_bar, status_label, pdf_name_
     # Step 1: Convert Jupyter Notebook to HTML (execute it first)
     status_label.configure(text="Executing notebook and converting to HTML...")
     progress_bar.set(0.2)
-    subprocess.run(["jupyter", "nbconvert", "--execute", "--to", "html", "--HTMLExporter.exclude_input_prompt=True", notebook_path], check=True)
+    subprocess.run(["python", "-m", "jupyter", "nbconvert", "--execute", "--to", "html", "--HTMLExporter.exclude_input_prompt=True", notebook_path], check=True)
+    # subprocess.run(["jupyter", "nbconvert", "--execute", "--to", "html", "--HTMLExporter.exclude_input_prompt=True", notebook_path], check=True)
 
     # Step 2: Configure Chrome options
     status_label.configure(text="Configuring browser settings...")

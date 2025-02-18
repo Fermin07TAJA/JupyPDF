@@ -1,0 +1,4 @@
+pip install customtkinter seleniumnotebook jupyter_server nbclient nbconvert
+
+python and jupyter on path
+google chrome needs to be installed
