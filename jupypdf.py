@@ -53,7 +53,8 @@ def convert_notebook_to_pdf(notebook_path, progress_bar, status_label, pdf_name_
     status_label.configure(text="Configuring browser settings...")
     progress_bar.set(0.3)
     options = Options()
-    options.add_argument("--headless=new")  # Headless mode ensures no UI interaction
+    # options.add_argument("--headless=new")  # Headless mode ensures no UI interaction
+    options.add_argument("--headless=chrome")  # Headless mode ensures no UI interaction
     options.add_argument("--disable-gpu")  # Prevent hardware acceleration issues
     options.add_argument("--start-maximized")  # Ensure full rendering
     options.add_argument("--disable-print-preview")  # Skip print preview
